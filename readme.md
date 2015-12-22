@@ -1,3 +1,3 @@
-# Laravel Quickstart - Basic
+# Laravel Quickstart - Dockerised
 
 http://laravel.com/docs/quickstart

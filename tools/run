@@ -1,0 +1,12 @@
+#!/bin/bash
+
+docker run -d --name lara -p 8000:80 \
+	--link quicksql:database \
+	-e DB_HOST=database \
+	-e DB_DATABASE=quickstart \
+	-e DB_USERNAME=root \
+	-e DB_PASSWORD=root \
+	-e APP_DEBUG=true \
+	-v $(pwd):/var/www/app \
+	laravel-quickstart-docker \
+	php artisan serve --host 0.0.0.0 --port 80

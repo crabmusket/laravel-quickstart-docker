@@ -1,0 +1,11 @@
+#!/bin/bash
+
+docker run -it --rm \
+	--link quicksql:database \
+	-e DB_HOST=database \
+	-e DB_DATABASE=quickstart \
+	-e DB_USERNAME=root \
+	-e DB_PASSWORD=root \
+	-e APP_DEBUG=true \
+	laravel-quickstart-docker \
+	phpunit

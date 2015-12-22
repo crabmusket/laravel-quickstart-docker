@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker run -d --name quicksql -e MYSQL_ROOT_PASSWORD=root mysql:5.7
+echo 'CREATE DATABASE quickstart;' | docker exec -i quicksql sh -c 'exec mysql -hlocalhost -uroot -proot'
